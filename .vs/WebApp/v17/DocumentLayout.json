@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\All\\SUSU\\\u041A\u0423\u0420\u0421\u0410\u0427 23-24\\5. \u0420\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B\\WebApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\All\\SUSU\\\u041A\u0423\u0420\u0421\u0410\u0427 23-24\\5. \u0420\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B\\WebApp\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{1AEFCC7E-4E1E-4D35-95B0-3ED534D16332}|WebApp\\WebApp.csproj|c:\\all\\susu\\\u043A\u0443\u0440\u0441\u0430\u0447 23-24\\5. \u0440\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B\\webapp\\webapp\\components\\pages\\institutes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1AEFCC7E-4E1E-4D35-95B0-3ED534D16332}|WebApp\\WebApp.csproj|solutionrelative:webapp\\components\\pages\\institutes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AEFCC7E-4E1E-4D35-95B0-3ED534D16332}|WebApp\\WebApp.csproj|c:\\all\\susu\\\u043A\u0443\u0440\u0441\u0430\u0447 23-24\\5. \u0440\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B\\webapp\\webapp\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1AEFCC7E-4E1E-4D35-95B0-3ED534D16332}|WebApp\\WebApp.csproj|solutionrelative:webapp\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{1AEFCC7E-4E1E-4D35-95B0-3ED534D16332}|WebApp\\WebApp.csproj|c:\\all\\susu\\\u043A\u0443\u0440\u0441\u0430\u0447 23-24\\5. \u0440\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B\\webapp\\webapp\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1AEFCC7E-4E1E-4D35-95B0-3ED534D16332}|WebApp\\WebApp.csproj|solutionrelative:webapp\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AEFCC7E-4E1E-4D35-95B0-3ED534D16332}|WebApp\\WebApp.csproj|c:\\all\\susu\\\u043A\u0443\u0440\u0441\u0430\u0447 23-24\\5. \u0440\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B\\webapp\\webapp\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AEFCC7E-4E1E-4D35-95B0-3ED534D16332}|WebApp\\WebApp.csproj|solutionrelative:webapp\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1AEFCC7E-4E1E-4D35-95B0-3ED534D16332}|WebApp\\WebApp.csproj|c:\\all\\susu\\\u043A\u0443\u0440\u0441\u0430\u0447 23-24\\5. \u0440\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B\\webapp\\webapp\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -19,12 +23,28 @@
       "RelativeMoniker": "D:0:0:{1AEFCC7E-4E1E-4D35-95B0-3ED534D16332}|WebApp\\WebApp.csproj|solutionrelative:webapp\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{1AEFCC7E-4E1E-4D35-95B0-3ED534D16332}|WebApp\\WebApp.csproj|c:\\all\\susu\\\u043A\u0443\u0440\u0441\u0430\u0447 23-24\\5. \u0440\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B\\webapp\\webapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AEFCC7E-4E1E-4D35-95B0-3ED534D16332}|WebApp\\WebApp.csproj|solutionrelative:webapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AEFCC7E-4E1E-4D35-95B0-3ED534D16332}|WebApp\\WebApp.csproj|c:\\all\\susu\\\u043A\u0443\u0440\u0441\u0430\u0447 23-24\\5. \u0440\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B\\webapp\\webapp\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1AEFCC7E-4E1E-4D35-95B0-3ED534D16332}|WebApp\\WebApp.csproj|solutionrelative:webapp\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AEFCC7E-4E1E-4D35-95B0-3ED534D16332}|WebApp\\WebApp.csproj|c:\\all\\susu\\\u043A\u0443\u0440\u0441\u0430\u0447 23-24\\5. \u0440\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B\\webapp\\webapp\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1AEFCC7E-4E1E-4D35-95B0-3ED534D16332}|WebApp\\WebApp.csproj|solutionrelative:webapp\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1AEFCC7E-4E1E-4D35-95B0-3ED534D16332}|WebApp\\WebApp.csproj|c:\\all\\susu\\\u043A\u0443\u0440\u0441\u0430\u0447 23-24\\5. \u0440\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B\\webapp\\webapp\\components\\layout\\mainlayout.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{1AEFCC7E-4E1E-4D35-95B0-3ED534D16332}|WebApp\\WebApp.csproj|solutionrelative:webapp\\components\\layout\\mainlayout.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AEFCC7E-4E1E-4D35-95B0-3ED534D16332}|WebApp\\WebApp.csproj|c:\\all\\susu\\\u043A\u0443\u0440\u0441\u0430\u0447 23-24\\5. \u0440\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B\\webapp\\webapp\\components\\pages\\institutes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1AEFCC7E-4E1E-4D35-95B0-3ED534D16332}|WebApp\\WebApp.csproj|solutionrelative:webapp\\components\\pages\\institutes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{1AEFCC7E-4E1E-4D35-95B0-3ED534D16332}|WebApp\\WebApp.csproj|c:\\all\\susu\\\u043A\u0443\u0440\u0441\u0430\u0447 23-24\\5. \u0440\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B\\webapp\\webapp\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1AEFCC7E-4E1E-4D35-95B0-3ED534D16332}|WebApp\\WebApp.csproj|solutionrelative:webapp\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\All\\SUSU\\\u041A\u0423\u0420\u0421\u0410\u0427 23-24\\5. \u0420\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B\\WebApp\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1AEFCC7E-4E1E-4D35-95B0-3ED534D16332}|WebApp\\WebApp.csproj|c:\\all\\susu\\\u043A\u0443\u0440\u0441\u0430\u0447 23-24\\5. \u0440\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B\\webapp\\webapp\\wwwroot\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -35,24 +55,8 @@
       "RelativeMoniker": "D:0:0:{1AEFCC7E-4E1E-4D35-95B0-3ED534D16332}|WebApp\\WebApp.csproj|solutionrelative:webapp\\components\\pages\\magistratura.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AEFCC7E-4E1E-4D35-95B0-3ED534D16332}|WebApp\\WebApp.csproj|c:\\all\\susu\\\u043A\u0443\u0440\u0441\u0430\u0447 23-24\\5. \u0440\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B\\webapp\\webapp\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1AEFCC7E-4E1E-4D35-95B0-3ED534D16332}|WebApp\\WebApp.csproj|solutionrelative:webapp\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1AEFCC7E-4E1E-4D35-95B0-3ED534D16332}|WebApp\\WebApp.csproj|c:\\all\\susu\\\u043A\u0443\u0440\u0441\u0430\u0447 23-24\\5. \u0440\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B\\webapp\\webapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AEFCC7E-4E1E-4D35-95B0-3ED534D16332}|WebApp\\WebApp.csproj|solutionrelative:webapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1AEFCC7E-4E1E-4D35-95B0-3ED534D16332}|WebApp\\WebApp.csproj|c:\\all\\susu\\\u043A\u0443\u0440\u0441\u0430\u0447 23-24\\5. \u0440\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B\\webapp\\webapp\\components\\pages\\bakalavriat.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1AEFCC7E-4E1E-4D35-95B0-3ED534D16332}|WebApp\\WebApp.csproj|solutionrelative:webapp\\components\\pages\\bakalavriat.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1AEFCC7E-4E1E-4D35-95B0-3ED534D16332}|WebApp\\WebApp.csproj|c:\\all\\susu\\\u043A\u0443\u0440\u0441\u0430\u0447 23-24\\5. \u0440\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B\\webapp\\webapp\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1AEFCC7E-4E1E-4D35-95B0-3ED534D16332}|WebApp\\WebApp.csproj|solutionrelative:webapp\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1AEFCC7E-4E1E-4D35-95B0-3ED534D16332}|WebApp\\WebApp.csproj|c:\\all\\susu\\\u043A\u0443\u0440\u0441\u0430\u0447 23-24\\5. \u0440\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B\\webapp\\webapp\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1AEFCC7E-4E1E-4D35-95B0-3ED534D16332}|WebApp\\WebApp.csproj|solutionrelative:webapp\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,20 +74,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "DataBase.cs",
+              "DocumentMoniker": "C:\\All\\SUSU\\\u041A\u0423\u0420\u0421\u0410\u0427 23-24\\5. \u0420\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B\\WebApp\\WebApp\\DataBase.cs",
+              "RelativeDocumentMoniker": "WebApp\\DataBase.cs",
+              "ToolTip": "C:\\All\\SUSU\\\u041A\u0423\u0420\u0421\u0410\u0427 23-24\\5. \u0420\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B\\WebApp\\WebApp\\DataBase.cs",
+              "RelativeToolTip": "WebApp\\DataBase.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T19:28:36.345Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": ".gitignore",
               "DocumentMoniker": "C:\\All\\SUSU\\\u041A\u0423\u0420\u0421\u0410\u0427 23-24\\5. \u0420\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B\\WebApp\\.gitignore",
               "RelativeDocumentMoniker": ".gitignore",
               "ToolTip": "C:\\All\\SUSU\\\u041A\u0423\u0420\u0421\u0410\u0427 23-24\\5. \u0420\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B\\WebApp\\.gitignore",
               "RelativeToolTip": ".gitignore",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAWAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2024-06-06T18:50:54.394Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "app.css",
               "DocumentMoniker": "C:\\All\\SUSU\\\u041A\u0423\u0420\u0421\u0410\u0427 23-24\\5. \u0420\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B\\WebApp\\WebApp\\wwwroot\\app.css",
               "RelativeDocumentMoniker": "WebApp\\wwwroot\\app.css",
@@ -91,11 +108,12 @@
               "RelativeToolTip": "WebApp\\wwwroot\\app.css",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-06-06T16:32:46.858Z"
+              "WhenOpened": "2024-06-06T16:32:46.858Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "MainLayout.razor.css",
               "DocumentMoniker": "C:\\All\\SUSU\\\u041A\u0423\u0420\u0421\u0410\u0427 23-24\\5. \u0420\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B\\WebApp\\WebApp\\Components\\Layout\\MainLayout.razor.css",
               "RelativeDocumentMoniker": "WebApp\\Components\\Layout\\MainLayout.razor.css",
@@ -103,11 +121,12 @@
               "RelativeToolTip": "WebApp\\Components\\Layout\\MainLayout.razor.css",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-06-06T11:38:42.843Z"
+              "WhenOpened": "2024-06-06T11:38:42.843Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "Home.razor",
               "DocumentMoniker": "C:\\All\\SUSU\\\u041A\u0423\u0420\u0421\u0410\u0427 23-24\\5. \u0420\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B\\WebApp\\WebApp\\Components\\Pages\\Home.razor",
               "RelativeDocumentMoniker": "WebApp\\Components\\Pages\\Home.razor",
@@ -115,23 +134,25 @@
               "RelativeToolTip": "WebApp\\Components\\Pages\\Home.razor",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-28T15:31:20.08Z"
+              "WhenOpened": "2024-05-28T15:31:20.08Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "Institutes.razor",
               "DocumentMoniker": "C:\\All\\SUSU\\\u041A\u0423\u0420\u0421\u0410\u0427 23-24\\5. \u0420\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B\\WebApp\\WebApp\\Components\\Pages\\Institutes.razor",
               "RelativeDocumentMoniker": "WebApp\\Components\\Pages\\Institutes.razor",
               "ToolTip": "C:\\All\\SUSU\\\u041A\u0423\u0420\u0421\u0410\u0427 23-24\\5. \u0420\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B\\WebApp\\WebApp\\Components\\Pages\\Institutes.razor",
               "RelativeToolTip": "WebApp\\Components\\Pages\\Institutes.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABkAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-06T16:25:04.708Z"
+              "WhenOpened": "2024-06-06T16:25:04.708Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "Bakalavriat.razor",
               "DocumentMoniker": "C:\\All\\SUSU\\\u041A\u0423\u0420\u0421\u0410\u0427 23-24\\5. \u0420\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B\\WebApp\\WebApp\\Components\\Pages\\Bakalavriat.razor",
               "RelativeDocumentMoniker": "WebApp\\Components\\Pages\\Bakalavriat.razor",
@@ -139,11 +160,12 @@
               "RelativeToolTip": "WebApp\\Components\\Pages\\Bakalavriat.razor",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-06T16:29:12.258Z"
+              "WhenOpened": "2024-06-06T16:29:12.258Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "Magistratura.razor",
               "DocumentMoniker": "C:\\All\\SUSU\\\u041A\u0423\u0420\u0421\u0410\u0427 23-24\\5. \u0420\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B\\WebApp\\WebApp\\Components\\Pages\\Magistratura.razor",
               "RelativeDocumentMoniker": "WebApp\\Components\\Pages\\Magistratura.razor",
@@ -151,11 +173,12 @@
               "RelativeToolTip": "WebApp\\Components\\Pages\\Magistratura.razor",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-06T16:30:33.291Z"
+              "WhenOpened": "2024-06-06T16:30:33.291Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "MainLayout.razor",
               "DocumentMoniker": "C:\\All\\SUSU\\\u041A\u0423\u0420\u0421\u0410\u0427 23-24\\5. \u0420\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B\\WebApp\\WebApp\\Components\\Layout\\MainLayout.razor",
               "RelativeDocumentMoniker": "WebApp\\Components\\Layout\\MainLayout.razor",
@@ -163,35 +186,38 @@
               "RelativeToolTip": "WebApp\\Components\\Layout\\MainLayout.razor",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAABeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-06T10:06:53.755Z"
+              "WhenOpened": "2024-06-06T10:06:53.755Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "NavMenu.razor",
               "DocumentMoniker": "C:\\All\\SUSU\\\u041A\u0423\u0420\u0421\u0410\u0427 23-24\\5. \u0420\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B\\WebApp\\WebApp\\Components\\Layout\\NavMenu.razor",
               "RelativeDocumentMoniker": "WebApp\\Components\\Layout\\NavMenu.razor",
               "ToolTip": "C:\\All\\SUSU\\\u041A\u0423\u0420\u0421\u0410\u0427 23-24\\5. \u0420\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B\\WebApp\\WebApp\\Components\\Layout\\NavMenu.razor",
               "RelativeToolTip": "WebApp\\Components\\Layout\\NavMenu.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAOAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-06T10:03:00.738Z"
+              "WhenOpened": "2024-06-06T10:03:00.738Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 1,
               "Title": "_Imports.razor",
               "DocumentMoniker": "C:\\All\\SUSU\\\u041A\u0423\u0420\u0421\u0410\u0427 23-24\\5. \u0420\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B\\WebApp\\WebApp\\Components\\_Imports.razor",
               "RelativeDocumentMoniker": "WebApp\\Components\\_Imports.razor",
               "ToolTip": "C:\\All\\SUSU\\\u041A\u0423\u0420\u0421\u0410\u0427 23-24\\5. \u0420\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B\\WebApp\\WebApp\\Components\\_Imports.razor",
               "RelativeToolTip": "WebApp\\Components\\_Imports.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-28T15:48:52.54Z"
+              "WhenOpened": "2024-05-28T15:48:52.54Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 7,
               "Title": "Routes.razor",
               "DocumentMoniker": "C:\\All\\SUSU\\\u041A\u0423\u0420\u0421\u0410\u0427 23-24\\5. \u0420\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B\\WebApp\\WebApp\\Components\\Routes.razor",
               "RelativeDocumentMoniker": "WebApp\\Components\\Routes.razor",
@@ -199,11 +225,12 @@
               "RelativeToolTip": "WebApp\\Components\\Routes.razor",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-28T15:46:49.054Z"
+              "WhenOpened": "2024-05-28T15:46:49.054Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "App.razor",
               "DocumentMoniker": "C:\\All\\SUSU\\\u041A\u0423\u0420\u0421\u0410\u0427 23-24\\5. \u0420\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B\\WebApp\\WebApp\\Components\\App.razor",
               "RelativeDocumentMoniker": "WebApp\\Components\\App.razor",
@@ -211,11 +238,12 @@
               "RelativeToolTip": "WebApp\\Components\\App.razor",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-28T15:46:39.648Z"
+              "WhenOpened": "2024-05-28T15:46:39.648Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\All\\SUSU\\\u041A\u0423\u0420\u0421\u0410\u0427 23-24\\5. \u0420\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B\\WebApp\\WebApp\\Program.cs",
               "RelativeDocumentMoniker": "WebApp\\Program.cs",
@@ -223,7 +251,8 @@
               "RelativeToolTip": "WebApp\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T15:25:08.341Z"
+              "WhenOpened": "2024-05-28T15:25:08.341Z",
+              "EditorCaption": ""
             }
           ]
         }
