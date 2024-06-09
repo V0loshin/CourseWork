@@ -22,10 +22,6 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/All/SUSU/КУРСАЧ 23-24/5. Реализация и тестирование системы/WebApp/WebApp/Components/Pages/Bakalavriat.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xCYWthbGF2cmlhdC5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/All/SUSU/КУРСАЧ 23-24/5. Реализация и тестирование системы/WebApp/WebApp/Components/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -34,12 +30,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/All/SUSU/КУРСАЧ 23-24/5. Реализация и тестирование системы/WebApp/WebApp/Components/Pages/Institutes.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xJbnN0aXR1dGVzLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/All/SUSU/КУРСАЧ 23-24/5. Реализация и тестирование системы/WebApp/WebApp/Components/Pages/Magistratura.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNYWdpc3RyYXR1cmEucmF6b3I=
+[C:/All/SUSU/КУРСАЧ 23-24/5. Реализация и тестирование системы/WebApp/WebApp/Components/Pages/Table.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xUYWJsZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/All/SUSU/КУРСАЧ 23-24/5. Реализация и тестирование системы/WebApp/WebApp/Components/Routes.razor]
@@ -57,3 +49,19 @@ build_metadata.AdditionalFiles.CssScope = b-pui3qmsk44
 [C:/All/SUSU/КУРСАЧ 23-24/5. Реализация и тестирование системы/WebApp/WebApp/Components/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-cfr3pjxbop
+
+[C:/All/SUSU/КУРСАЧ 23-24/5. Реализация и тестирование системы/WebApp/WebApp/Components/Pages/Bakalavriat.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xCYWthbGF2cmlhdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-vqymdq4izb
+
+[C:/All/SUSU/КУРСАЧ 23-24/5. Реализация и тестирование системы/WebApp/WebApp/Components/Pages/Institutes.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xJbnN0aXR1dGVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-nc9wb55v9p
+
+[C:/All/SUSU/КУРСАЧ 23-24/5. Реализация и тестирование системы/WebApp/WebApp/Components/Pages/Magistratura.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNYWdpc3RyYXR1cmEucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-gf23cx72l6
+
+[C:/All/SUSU/КУРСАЧ 23-24/5. Реализация и тестирование системы/WebApp/WebApp/Components/Pages/SearchSortBar.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTZWFyY2hTb3J0QmFyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-uhti4tl855

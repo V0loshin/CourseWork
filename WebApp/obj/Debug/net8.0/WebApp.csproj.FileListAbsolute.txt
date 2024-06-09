@@ -53,3 +53,7 @@ C:\All\SUSU\КУРСАЧ 23-24\5. Реализация и тестировани
 C:\All\SUSU\КУРСАЧ 23-24\5. Реализация и тестирование системы\WebApp\WebApp\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\All\SUSU\КУРСАЧ 23-24\5. Реализация и тестирование системы\WebApp\WebApp\obj\Debug\net8.0\WebApp.csproj.AssemblyReference.cache
 C:\All\SUSU\КУРСАЧ 23-24\5. Реализация и тестирование системы\WebApp\WebApp\obj\Debug\net8.0\WebApp.csproj.Up2Date
+C:\All\SUSU\КУРСАЧ 23-24\5. Реализация и тестирование системы\WebApp\WebApp\obj\Debug\net8.0\scopedcss\Components\Pages\Magistratura.razor.rz.scp.css
+C:\All\SUSU\КУРСАЧ 23-24\5. Реализация и тестирование системы\WebApp\WebApp\obj\Debug\net8.0\scopedcss\Components\Pages\SearchSortBar.razor.rz.scp.css
+C:\All\SUSU\КУРСАЧ 23-24\5. Реализация и тестирование системы\WebApp\WebApp\obj\Debug\net8.0\scopedcss\Components\Pages\Bakalavriat.razor.rz.scp.css
+C:\All\SUSU\КУРСАЧ 23-24\5. Реализация и тестирование системы\WebApp\WebApp\obj\Debug\net8.0\scopedcss\Components\Pages\Institutes.razor.rz.scp.css

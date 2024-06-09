@@ -1,0 +1,74 @@
+[class^="col-"][b-nc9wb55v9p] {
+    padding: 50px;
+    padding-top: 10px;
+}
+
+main[b-nc9wb55v9p] {
+    /*padding-left: 50px;*/
+}
+
+h3[b-nc9wb55v9p] {
+    font-size: 36px;
+    font-weight: bolder;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+div.blockItemMain[b-nc9wb55v9p] {
+    background-color: #c9e4ff;
+    display: grid;
+    grid-template-columns: 5% 95%;
+    grid-template-rows: 1;
+    /*flex: 1 5 2;
+    flex-direction: row;
+    display: flex;
+    justify-content: start;
+    align-items: start;*/
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+div.inst_name[b-nc9wb55v9p] {
+    font-size: 22px;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+div.city[b-nc9wb55v9p] {
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+div.inst_website[b-nc9wb55v9p] {
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+div.index[b-nc9wb55v9p] {
+    border-right: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+div.data[b-nc9wb55v9p] {
+    flex-direction: column;
+    display: flex;
+    align-items: start;
+    padding-left: 20px;
+}
+
+.btnNext button[b-nc9wb55v9p] {
+    font-size: 20px;
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.inst_name[b-nc9wb55v9p] {
+    margin-bottom: 10px;
+}

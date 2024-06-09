@@ -1,38 +1,52 @@
 ﻿@inherits LayoutComponentBase
 
 <div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+	@* <div class="sidebar">
+	<NavMenu />
+	</div> *@
 
-    <main>
-        <div class="top-row px-4">
-            <NavLink href="institutes">
-                <button class="btn btn-primary">
-                    ВУЗы России
-                </button>
-            </NavLink>
-            <NavLink href="bakalavriat">
-                <button class="btn btn-primary">
-                    Бакалавриат
-                </button>
-            </NavLink>
-            <NavLink href="magistratura">
-                <button class="btn btn-primary">
-                    Магистратура
-                </button>
-            </NavLink>
-            @* <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a> *@
-        </div>
+	<main>
+		<div class="top-row px-4">
+			<NavLink href="institutes">
+				<button class="btn btn-primary">
+					ВУЗы России
+				</button>
+			</NavLink>
+			<NavLink href="bakalavriat">
+				<button class="btn btn-primary">
+					Бакалавриат/Специалитет
+				</button>
+			</NavLink>
+			<NavLink href="magistratura">
+				<button class="btn btn-primary">
+					Магистратура
+				</button>
+			</NavLink>
+			@* <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a> *@
+		</div>
 
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
+		<article class="content px-4">
+			@Body
+		</article>
+
+		@* <div class="footer-row px-4">
+			<div>Контакты:</div>
+			<div>+7 982 290 67 42</div>
+			<div>ilya.voloshin.16@mail.ru</div>
+		</div> *@
+	</main>
+
+	@* <main>
+
+
+	<article class="content px-4">
+	@Body
+	</article>
+	</main> *@
 </div>
 
 <div id="blazor-error-ui">
-    An unhandled error has occurred.
-    <a href="" class="reload">Reload</a>
-    <a class="dismiss">🗙</a>
+	An unhandled error has occurred.
+	<a href="" class="reload">Reload</a>
+	<a class="dismiss">🗙</a>
 </div>

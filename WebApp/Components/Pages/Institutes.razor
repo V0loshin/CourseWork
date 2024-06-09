@@ -1,7 +1,8 @@
 ﻿@page "/institutes"
 @attribute [StreamRendering]
+@rendermode InteractiveServer
 
-<h3>Institutes</h3>
+
 
 @* <NavLink href="/">
 	<button class="btn btn-primary">
@@ -9,39 +10,164 @@
 	</button>
 </NavLink> *@
 
+<div class="instcontent">
 
+	@* @if (table != null && lastViewedIndex == 0)
+	{
+	//viewedTable = new DataTable();
+	viewedTable = table.Clone();
 
-@if (table.Rows.Count == 0)
-{
+	if (table.Rows.Count == 0)
+	{
 	<p><em>Loading...</em></p>
-}
-else
-{
+	}
+	if (table.Rows.Count > 10)
+	{
+	for (int i = 0; i < 10; i++)
+	{
+	lastViewedIndex = i;
+	viewedTable.ImportRow(table.Rows[i]);
+	}
+	if (lastViewedIndex < table.Rows.Count - 1) ShowNext = true;
+	else ShowNext = false;
+	}
+	else
+	{
 	for (int i = 0; i < table.Rows.Count; i++)
 	{
-		<br />
-		<span>ID: @table.Rows[i][0] Название: @table.Rows[i][1] Город: @table.Rows[i][2] Ссылка: @table.Rows[i][3]</span>
+	lastViewedIndex = i;
 	}
-	
-}
+	ShowNext = false;
+	}
 
+	@* <Table DTable=@viewedTable ShowNext=@ShowNext OnClickCallback=@IsClicked /> *
+	} *@
+
+	<div class="container">
+		<div class="row page">
+			<div class="col-lg-12">
+				<main>
+					
+					<h3>ВУЗы России</h3>
+					
+					@if (viewedTable.Rows.Count == 0)
+					{
+						<p><em>Загрузка данных...</em></p>
+					}
+					else
+					{
+						@foreach (var row in viewedTable.Rows)
+						{
+							int i = counter;
+							<div class="row blockItemMain">
+								<div class="index">@(i + 1)</div>
+								<div class="data">
+									<div class="inst_name">@viewedTable.Rows[i][1]</div>
+									<div class="city">г. @viewedTable.Rows[i][2]</div>
+									<div class="inst_website">
+										<a href="@viewedTable.Rows[i][3]">🌏︎ @viewedTable.Rows[i][3]</a>
+									</div>
+								</div>
+							</div>
+							counter += 1;
+						}
+
+						@if (counter == viewedTable.Rows.Count && ShowNext)
+						{
+							<div>
+								<button @onclick="@IsClicked">Далее</button>
+							</div>
+						}
+					}
+				</main>
+			</div>
+		</div>
+	</div>
+
+</div>
 
 @code {
+
 	DataBase? db;
 	DataTable? table;
+	DataTable? viewedTable;
 	MySqlDataAdapter? adapter;
 	MySqlCommand? command;
+
+	int lastViewedIndex = 0;
+	bool ShowNext = false;
+	bool btnClicked = false;
+	int counter = 0;
 
 	protected override void OnInitialized()
 	{
 		db = new DataBase();
 
 		table = new DataTable();
+		viewedTable = new DataTable();
 
 		adapter = new MySqlDataAdapter();
 
 		command = new MySqlCommand("SELECT * FROM `institutes`", db.getConnection());
 		adapter.SelectCommand = command;
 		adapter.Fill(table);
+		FillViewTable(table);
+		counter = 0;
+	}
+
+	public void FillViewTable(DataTable dTable)
+	{
+		if (dTable != null && lastViewedIndex == 0)
+		{
+			viewedTable.Clear();
+			viewedTable = dTable.Clone();
+
+			if (dTable.Rows.Count > 20)
+			{
+				for (int i = 0; i < 20; i++)
+				{
+					lastViewedIndex = i;
+					viewedTable.ImportRow(dTable.Rows[i]);
+				}
+				if (lastViewedIndex < dTable.Rows.Count - 1) ShowNext = true;
+				else ShowNext = false;
+			}
+			else
+			{
+				for (int i = 0; i < dTable.Rows.Count; i++)
+				{
+					lastViewedIndex = i;
+					viewedTable.ImportRow(dTable.Rows[i]);
+				}
+				ShowNext = false;
+			}
+		}
+		else viewedTable.Clear();
+	}
+
+	public void IsClicked()
+	{
+		if (table.Rows.Count - lastViewedIndex + 1 > 10)
+		{
+			for (int i = lastViewedIndex + 1; i < lastViewedIndex + 11; i++)
+			{
+				viewedTable.ImportRow(table.Rows[i]);
+				if (i == lastViewedIndex + 10) break;
+			}
+			lastViewedIndex = lastViewedIndex + 10;
+			if (lastViewedIndex < table.Rows.Count - 1) ShowNext = true;
+			else ShowNext = false;
+		}
+		else
+		{
+			for (int i = lastViewedIndex + 1; i < table.Rows.Count; i++)
+			{
+				viewedTable.ImportRow(table.Rows[i]);
+				if (i == table.Rows.Count - 1) break;
+			}
+			lastViewedIndex = table.Rows.Count - 1;
+			ShowNext = false;
+		}
+		counter = 0;
 	}
 }

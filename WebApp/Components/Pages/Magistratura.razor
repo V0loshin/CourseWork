@@ -1,7 +1,449 @@
 ﻿@page "/magistratura"
+@attribute [StreamRendering]
+@rendermode InteractiveServer
 
-<h3>Magistratura</h3>
+<div class="magistrcontent">
+	<div class="container">
+		<div class="row page">
+			<div class="col-lg-3">
+				<SearchSortBar BarType="Магистратура" OnClickCallback="@GetSearchData" OnSortClickCallback="@GetSortData" />
+			</div>
+
+			<div class="col-lg-9">
+				<main>
+					<h3>Магистратура</h3>
+
+					@if (foundDataTable != null && foundDataTable.Rows.Count == 0 && btnClicked)
+					{
+						<p><em>Не найдено ни одной удовлетворяющей специальности...</em></p>
+					}
+					else if (viewedTable.Rows.Count == 0 && !sortActive)
+					{
+						<p><em>Загрузка данных...</em></p>
+					}
+					else if (viewedTable.Rows.Count == 0 && sortActive)
+					{
+						<p><em>Производится сортировка...</em></p>
+					}
+					else
+					{
+						btnClicked = false;
+						counter = 0;
+						foreach (var row in viewedTable.Rows)
+						{
+							int i = counter;
+							<div class="blockItemMain">
+								<div class="index">@(i + 1)</div>
+								<div class="data">
+									<div class="spec_name">@viewedTable.Rows[i][0]</div>
+									<div class="inst_name">
+										<a href="@viewedTable.Rows[i][6]">@viewedTable.Rows[i][1]</a>
+									</div>
+									<div class="educ_form">Форма: @viewedTable.Rows[i][2]</div>
+									<div class="budg_places">Бюджетных мест: @viewedTable.Rows[i][3]</div>
+									<div class="contract_places">Мест на платное обучение: @viewedTable.Rows[i][4]</div>
+									<div class="cost">Стоимость платного обучения: @viewedTable.Rows[i][5] р.</div>
+								</div>
+							</div>
+							counter += 1;
+						}
+
+					}
+
+					@if (counter == viewedTable.Rows.Count && ShowNext)
+					{
+						<div class="btnNext">
+							<button @onclick="@NextIsClicked">Далее</button>
+						</div>
+					}
+
+				</main>
+			</div>
+		</div>
+
+	</div>
+
+
+
+</div>
 
 @code {
+	DataBase? db;
+	DataTable? table;
+	DataTable? viewedTable;
+	DataTable? foundDataTable;
+	DataTable? sortedTable;
+	MySqlDataAdapter? adapter;
+	MySqlCommand? command;
+	SearchData? sData;
 
+	int lastViewedIndex = 0;
+	bool ShowNext = false;
+	bool btnClicked = false;
+	bool valuesFound = false;
+	bool sortActive = false;
+	int counter = 0;
+	string selectrow = "";
+
+	protected override void OnInitialized()
+	{
+		db = new DataBase();
+
+		table = new DataTable();
+		viewedTable = new DataTable();
+
+		adapter = new MySqlDataAdapter();
+
+		selectrow = @"SELECT
+						(SELECT `spec_name` FROM `specialities` WHERE `ID` = `spec_ID`) AS SpecName,
+						(SELECT `inst_name` FROM `institutes` WHERE `ID` = `inst_ID`) AS InstName,
+						`form`,
+						`budget`,
+						`contract`,
+						`cost`,
+						(SELECT website FROM institutes WHERE ID = inst_ID) AS Website,
+						(SELECT qualification FROM specialities WHERE ID = spec_ID) AS Qualification
+					FROM `insts_specs`
+					WHERE (SELECT qualification FROM specialities WHERE ID = spec_ID) LIKE '%Магистратура%';";
+
+		command = new MySqlCommand(selectrow, db.getConnection());
+		adapter.SelectCommand = command;
+		adapter.Fill(table);
+		FillViewTable(table);
+		counter = 0;
+	}
+
+
+	public void FillViewTable(DataTable dTable)
+	{
+		if (dTable != null && lastViewedIndex == 0)
+		{
+			viewedTable.Clear();
+			viewedTable = dTable.Clone();
+
+			if (dTable.Rows.Count > 20)
+			{
+				for (int i = 0; i < 20; i++)
+				{
+					lastViewedIndex = i;
+					viewedTable.ImportRow(dTable.Rows[i]);
+				}
+				if (lastViewedIndex < dTable.Rows.Count - 1) ShowNext = true;
+				else ShowNext = false;
+			}
+			else
+			{
+				for (int i = 0; i < dTable.Rows.Count; i++)
+				{
+					lastViewedIndex = i;
+					viewedTable.ImportRow(dTable.Rows[i]);
+				}
+				ShowNext = false;
+			}
+		}
+		else viewedTable.Clear();
+	}
+
+
+	public void NextIsClicked()
+	{
+		if (foundDataTable == null && sortedTable == null)
+		{
+			if (table.Rows.Count - lastViewedIndex + 1 > 20)
+			{
+				for (int i = lastViewedIndex + 1; i < lastViewedIndex + 21; i++)
+				{
+					viewedTable.ImportRow(table.Rows[i]);
+					if (i == lastViewedIndex + 20) break;
+				}
+				lastViewedIndex = lastViewedIndex + 20;
+				if (lastViewedIndex < table.Rows.Count - 1) ShowNext = true;
+				else ShowNext = false;
+			}
+			else
+			{
+				for (int i = lastViewedIndex + 1; i < table.Rows.Count; i++)
+				{
+					viewedTable.ImportRow(table.Rows[i]);
+					if (i == table.Rows.Count - 1) break;
+				}
+				lastViewedIndex = table.Rows.Count - 1;
+				ShowNext = false;
+			}
+			counter = 0;
+		}
+		else if (foundDataTable == null)
+		{
+			if (sortedTable.Rows.Count - lastViewedIndex + 1 > 20)
+			{
+				for (int i = lastViewedIndex + 1; i < lastViewedIndex + 21; i++)
+				{
+					viewedTable.ImportRow(sortedTable.Rows[i]);
+					if (i == lastViewedIndex + 20) break;
+				}
+				lastViewedIndex = lastViewedIndex + 20;
+				if (lastViewedIndex < sortedTable.Rows.Count - 1) ShowNext = true;
+				else ShowNext = false;
+			}
+			else
+			{
+				for (int i = lastViewedIndex + 1; i < sortedTable.Rows.Count; i++)
+				{
+					viewedTable.ImportRow(sortedTable.Rows[i]);
+					if (i == sortedTable.Rows.Count - 1) break;
+				}
+				lastViewedIndex = sortedTable.Rows.Count - 1;
+				ShowNext = false;
+			}
+			counter = 0;
+		}
+		else
+		{
+			if (foundDataTable.Rows.Count - lastViewedIndex + 1 > 20)
+			{
+				for (int i = lastViewedIndex + 1; i < lastViewedIndex + 21; i++)
+				{
+					viewedTable.ImportRow(foundDataTable.Rows[i]);
+					if (i == lastViewedIndex + 20) break;
+				}
+				lastViewedIndex = lastViewedIndex + 20;
+				if (lastViewedIndex < foundDataTable.Rows.Count - 1) ShowNext = true;
+				else ShowNext = false;
+			}
+			else
+			{
+				for (int i = lastViewedIndex + 1; i < foundDataTable.Rows.Count; i++)
+				{
+					viewedTable.ImportRow(foundDataTable.Rows[i]);
+					if (i == foundDataTable.Rows.Count - 1) break;
+				}
+				lastViewedIndex = foundDataTable.Rows.Count - 1;
+				ShowNext = false;
+			}
+			counter = 0;
+		}
+
+	}
+
+
+	public void GetSearchData(SearchData data)
+	{
+		sData = new SearchData();
+		sData = data;
+		Search();
+	}
+
+	public void GetSortData(SearchData data)
+	{
+		sData = new SearchData();
+		sData = data;
+		sortActive = true;
+		FillViewTable(null);
+		Sort();
+	}
+
+	public void Search()
+	{
+		//bool sortNeeded = false;
+		bool found = false;
+		bool hasValues = false;
+		lastViewedIndex = 0;
+		counter = 0;
+		foundDataTable = new DataTable();
+		if (table != null)
+		{
+			foundDataTable = table.Clone();
+			for (int i = 0; i < table.Rows.Count; i++)
+			{
+
+				if (table.Rows[i][0].ToString().Contains(sData.Name))
+				{
+					if (int.Parse(table.Rows[i][3].ToString()) >= sData.BudgetPlaces)
+					{
+						if (int.Parse(table.Rows[i][4].ToString()) >= sData.ContractPlaces)
+						{
+							if (int.Parse(table.Rows[i][5].ToString()) >= sData.MinCost)
+							{
+								if (int.Parse(table.Rows[i][5].ToString()) <= sData.MaxCost)
+								{
+									foreach (var form in sData.EducFormVals)
+									{
+										if (form.Value)
+										{
+											hasValues = true;
+											if (form.Key.CompareTo(table.Rows[i][2].ToString()) == 0)
+											{
+												foundDataTable.ImportRow(table.Rows[i]);
+												found = true;
+											}
+										}
+									}
+									if (!found && !hasValues) foundDataTable.ImportRow(table.Rows[i]);
+									found = false;
+									hasValues = false;
+								}
+							}
+						}
+					}
+				}
+
+
+			}
+		}
+		FillViewTable(foundDataTable);
+		btnClicked = true;
+	}
+
+	public void Sort()
+	{
+		//foundDataTable = null;
+		foreach (var type in sData.SortTypesSet)
+		{
+			if (type.Key == 0 && type.Value != 0)
+			{
+				if (type.Value == 1) NameCombSort(1);
+				else NameCombSort(2);
+			}
+			if (type.Key == 1 && type.Value != 0)
+			{
+				if (type.Value == 1) CombSort(1, 3);
+				else CombSort(2, 3);
+			}
+			if (type.Key == 2 && type.Value != 0)
+			{
+				if (type.Value == 1) CombSort(1, 4);
+				else CombSort(2, 4);
+			}
+			if (type.Key == 3 && type.Value != 0)
+			{
+				if (type.Value == 1) CombSort(1, 5);
+				else CombSort(2, 5);
+			}
+		}
+		if (sortedTable != null && sortedTable.Rows.Count > 0)
+		{
+			lastViewedIndex = 0;
+			FillViewTable(sortedTable);
+		}
+		sortActive = false;
+	}
+
+	public void NameCombSort(int type)
+	{
+		bool swapped = false;
+		double factor = 1.25;
+		DataTable temp = new DataTable();
+		sortedTable = new DataTable();
+		if (foundDataTable != null && foundDataTable.Rows.Count > 0) FillSortTable(foundDataTable);
+		else FillSortTable(table);
+		int gap = sortedTable.Rows.Count;
+
+		while ((gap > 1) || swapped)
+		{
+			gap = (int)(gap / factor);
+			if (gap < 1) gap = 1;
+			int i = 0;
+			int m = gap;
+			swapped = false;
+			while (m < sortedTable.Rows.Count)
+			{
+				temp = sortedTable.Clone();
+				if (type == 1)
+				{
+					if (sortedTable.Rows[i][0].ToString().CompareTo(sortedTable.Rows[m][0].ToString()) > 0)
+					{
+						swapped = true;
+						temp.ImportRow(sortedTable.Rows[i]);
+						for (int j = 0; j < sortedTable.Columns.Count; j++)
+						{
+							sortedTable.Rows[i][j] = sortedTable.Rows[m][j];
+							sortedTable.Rows[m][j] = temp.Rows[0][j];
+						}
+					}
+				}
+				else
+				{
+					if (sortedTable.Rows[i][0].ToString().CompareTo(sortedTable.Rows[m][0].ToString()) < 0)
+					{
+						swapped = true;
+						temp.ImportRow(sortedTable.Rows[i]);
+						for (int j = 0; j < sortedTable.Columns.Count; j++)
+						{
+							sortedTable.Rows[i][j] = sortedTable.Rows[m][j];
+							sortedTable.Rows[m][j] = temp.Rows[0][j];
+						}
+					}
+				}
+				temp.Clear();
+				i++;
+				m = i + gap;
+			}
+		}
+		foundDataTable = null;
+		swapped = false;
+	}
+
+	public void CombSort(int type, int par_ind)
+	{
+		bool swapped = false;
+		double factor = 1.25;
+		DataTable temp = new DataTable();
+		sortedTable = new DataTable();
+		if (foundDataTable != null && foundDataTable.Rows.Count > 0) FillSortTable(foundDataTable);
+		else FillSortTable(table);
+		int gap = sortedTable.Rows.Count;
+
+		while ((gap > 1) || swapped)
+		{
+			gap = (int)(gap / factor);
+			if (gap < 1) gap = 1;
+			int i = 0;
+			int m = gap;
+			swapped = false;
+			while (m < sortedTable.Rows.Count)
+			{
+				temp = sortedTable.Clone();
+				if (type == 1)
+				{
+					if (int.Parse(sortedTable.Rows[i][par_ind].ToString()) > int.Parse(sortedTable.Rows[m][par_ind].ToString()))
+					{
+						swapped = true;
+						temp.ImportRow(sortedTable.Rows[i]);
+						for (int j = 0; j < sortedTable.Columns.Count; j++)
+						{
+							sortedTable.Rows[i][j] = sortedTable.Rows[m][j];
+							sortedTable.Rows[m][j] = temp.Rows[0][j];
+						}
+					}
+				}
+				else
+				{
+					if (int.Parse(sortedTable.Rows[i][par_ind].ToString()) < int.Parse(sortedTable.Rows[m][par_ind].ToString()))
+					{
+						swapped = true;
+						temp.ImportRow(sortedTable.Rows[i]);
+						for (int j = 0; j < sortedTable.Columns.Count; j++)
+						{
+							sortedTable.Rows[i][j] = sortedTable.Rows[m][j];
+							sortedTable.Rows[m][j] = temp.Rows[0][j];
+						}
+					}
+				}
+				temp.Clear();
+				i++;
+				m = i + gap;
+			}
+		}
+		foundDataTable = null;
+		swapped = false;
+	}
+
+	public void FillSortTable(DataTable dTable)
+	{
+		sortedTable = dTable.Clone();
+		for (int i = 0; i < dTable.Rows.Count; i++)
+		{
+			sortedTable.ImportRow(dTable.Rows[i]);
+		}
+	}
 }

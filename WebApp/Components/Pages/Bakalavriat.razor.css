@@ -1,0 +1,70 @@
+﻿[class^="col-"] {
+    padding: 50px;
+    padding-top: 10px;
+}
+
+main {
+    /*padding-left: 50px;*/
+}
+
+h3 {
+    font-size: 36px;
+    font-weight: bolder;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+div.blockItemMain {
+    background-color: #c9e4ff;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 1;
+    /*flex: 1 5 2;
+    flex-direction: row;
+    display: flex;
+    justify-content: start;
+    align-items: start;*/
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+div.spec_name {
+    font-size: 22px;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+div.index {
+    border-right: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+div.data {
+    flex-direction: column;
+    display: flex;
+    align-items: start;
+    padding-left: 20px;
+}
+
+div.col-lg-3 {
+    border: 1px solid black;
+    background-color: #9fc9ee;
+    margin-bottom: 48px;
+}
+
+.btnNext button {
+    font-size: 20px;
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.inst_name {
+    margin-bottom: 10px;
+}

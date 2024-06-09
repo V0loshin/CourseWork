@@ -1,0 +1,293 @@
+﻿<div class="bar-content">
+	@* <div class="row bar-head">
+	<h3>Поиск и сортировка</h3>
+	</div>
+
+	<div class="row"></div>
+
+	<div class="top-row ps-3">
+	<div class="container-fluid">
+	<a class="navbar-brand" href="">WebApp</a>
+	</div>
+	</div>
+
+	<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
+	<nav class="flex-column">
+	<div class="nav-item px-3">
+	<NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+	<span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
+	</NavLink>
+	</div>
+	</nav>
+	</div> *@
+
+	<h3>Поиск и сортировка</h3>
+
+	<div class="searchBlock">
+		<div class="search-spec-name">
+			<div class="blockName">
+				<div class="name">Название специальности</div>
+				<button @onclick="@NameSortBtnClick">@btnStr</button>
+			</div>
+			<br />
+			<input @bind-value="@sData.Name" />
+		</div>
+	</div>
+	<div class="searchBlock">
+		<div class="educ-form">
+			<div class="blockName">Форма обучения</div>
+			<p>
+				<input id="check" type="checkbox" name="Очная" @bind-value="@firstValue" />
+				<div>Очная</div>
+			</p>
+			<p>
+				<input id="check" type="checkbox" name="Очно-заочная" @bind-value="@secondValue" />
+				<div>Очно-заочная</div>
+			</p>
+			<p>
+				<input id="check" type="checkbox" name="Заочная" @bind-value="@thirdValue" />
+				<div>Заочная</div>
+			</p>
+		</div>
+	</div>
+	@if (BarType == "")
+	{
+		<div class="searchBlock">
+			<div class="pass-score-item">
+				<div class="blockName">
+					<div class="name">Проходной балл</div>
+					<button @onclick="@FourthSortBtnClick">@btnChar[3]</button>
+				</div>
+				<div class="cost">
+					<div>От: </div>
+					<input inputmode="numeric" @bind-value="@sData.MinScore" />
+					<div>До: </div>
+					<input inputmode="numeric" @bind-value="@sData.MaxScore" />
+				</div>
+			</div>
+		</div>
+	}
+	<div class="searchBlock">
+		<div class="blockName">
+			<div class="name">Количество бюджетных мест</div>
+			<button @onclick="@FirstSortBtnClick">@btnChar[0]</button>
+		</div>
+		<div class="places">
+			<div>От:</div>
+			<input @bind-value="@sData.BudgetPlaces" />
+		</div>
+	</div>
+	<div class="searchBlock">
+		<div class="blockName">
+			<div class="name">Количество мест на платное обчение</div>
+			<button @onclick="@SecondSortBtnClick">@btnChar[1]</button>
+		</div>
+		<div class="places">
+			<div>От:</div>
+			<input @bind-value="@sData.ContractPlaces" />
+		</div>
+	</div>
+	<div class="searchBlock">
+		<div class="costItem">
+			<div class="blockName">
+				<div class="name">Стоимость обучения</div>
+				<button @onclick="@ThirdSortBtnClick">@btnChar[2]</button>
+			</div>
+			<div class="cost">
+				<div>От: </div>
+				<input inputmode="numeric" @bind-value="@sData.MinCost" />
+				<div>До: </div>
+				<input inputmode="numeric" @bind-value="@sData.MaxCost" />
+			</div>
+		</div>
+
+	</div>
+
+	<div class="btnBlock">
+		<button @onclick="OnBtnClick">Найти</button>
+		<button @onclick="OnSortBtnClick">Отсортировать</button>
+	</div>
+
+	@* @if (BarType == "Магистратура")
+	{
+	<div>mag </div>
+	}
+	else
+	{
+	<div>Выбрано: </div>
+	} *@
+	@* <div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
+	<nav class="flex-column">
+	<div class="nav-item px-3">
+	<NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+	<span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
+	</NavLink>
+	</div>
+	<div class="nav-item px-3">
+
+	</div>
+	</nav>
+	</div> *@
+
+</div>
+
+
+@code {
+	[Parameter]
+	public string BarType { get; set; } = "";
+
+	[Parameter]
+	public EventCallback<SearchData> OnClickCallback { get; set; }
+
+	[Parameter]
+	public EventCallback<SearchData> OnSortClickCallback { get; set; }
+
+	Dictionary<string, bool> educForm = new Dictionary<string, bool>();
+	Dictionary<int, int> sortSet = new Dictionary<int, int>();
+
+	protected override void OnInitialized()
+	{
+		for (int i = 0; i < 4; i++)
+		{
+			btnChar.Add('-');
+			curChar.Add(0);
+		}
+	}
+
+	SearchData sData = new SearchData();
+
+	int currentStr = 0;
+
+	char[] chars = new char[3] { '-', '↑', '↓' };
+	string[] strings = new string[3] { " - ", "A..Я", "Я..А" };
+	List<char> btnChar = new List<char>();
+	List<int> curChar = new List<int>();
+
+	string btnStr = " - ";
+	//string rad_str = "";
+	string name_str = "";
+	bool firstValue = false;
+	bool secondValue = false;
+	bool thirdValue = false;
+
+	async Task OnBtnClick()
+	{
+		educForm.Clear();
+		sortSet.Clear();
+		educForm.Add("Очная", firstValue);
+		educForm.Add("Очно-заочная", secondValue);
+		educForm.Add("Заочная", thirdValue);
+		sData.EducFormVals = educForm;
+		sData.SortTypesSet = sortSet;
+		await OnClickCallback.InvokeAsync(sData);
+	}
+
+
+	async Task OnSortBtnClick()
+	{
+		educForm.Clear();
+		sortSet.Clear();
+		educForm.Add("Очная", firstValue);
+		educForm.Add("Очно-заочная", secondValue);
+		educForm.Add("Заочная", thirdValue);
+		sortSet.Add(0, currentStr);
+		sortSet.Add(1, curChar[0]);
+		sortSet.Add(2, curChar[1]);
+		sortSet.Add(3, curChar[2]);
+		sortSet.Add(4, curChar[3]);
+		sData.EducFormVals = educForm;
+		sData.SortTypesSet = sortSet;
+		await OnSortClickCallback.InvokeAsync(sData);
+	}
+
+
+	public void NameSortBtnClick()
+	{
+		if (currentStr < 2)
+		{
+			for (int i = 0; i < 4; i++)
+			{
+				curChar[i] = 0;
+				btnChar[i] = '-';
+			}
+			currentStr += 1;
+		}
+		else currentStr = 0;
+		btnStr = strings[currentStr];
+
+	}
+
+	public void FirstSortBtnClick()
+	{
+		if (curChar[0] < 2)
+		{
+			curChar[0] += 1;
+			for (int i = 1; i < 4; i++)
+			{
+				curChar[i] = 0;
+				btnChar[i] = '-';
+			}
+			currentStr = 0;
+			btnStr = strings[currentStr];
+		}
+		else curChar[0] = 0;
+		btnChar[0] = chars[curChar[0]];
+	}
+
+	public void SecondSortBtnClick()
+	{
+		if (curChar[1] < 2)
+		{
+			curChar[1] += 1;
+			for (int i = 0; i < 4; i++)
+			{
+				if (i != 1)
+				{
+					curChar[i] = 0;
+					btnChar[i] = '-';
+				}
+			}
+			currentStr = 0;
+			btnStr = strings[currentStr];
+		}
+		else curChar[1] = 0;
+		btnChar[1] = chars[curChar[1]];
+	}
+
+	public void ThirdSortBtnClick()
+	{
+		if (curChar[2] < 2)
+		{
+			curChar[2] += 1;
+			for (int i = 0; i < 4; i++)
+			{
+				if (i != 2)
+				{
+					curChar[i] = 0;
+					btnChar[i] = '-';
+				}
+			}
+			currentStr = 0;
+			btnStr = strings[currentStr];
+		}
+		else curChar[2] = 0;
+		btnChar[2] = chars[curChar[2]];
+	}
+
+	public void FourthSortBtnClick()
+	{
+		if (curChar[3] < 2)
+		{
+			curChar[3] += 1;
+			for (int i = 0; i < 3; i++)
+			{
+				curChar[i] = 0;
+				btnChar[i] = '-';
+			}
+			currentStr = 0;
+			btnStr = strings[currentStr];
+		}
+		else curChar[3] = 0;
+		btnChar[3] = chars[curChar[3]];
+	}
+}
