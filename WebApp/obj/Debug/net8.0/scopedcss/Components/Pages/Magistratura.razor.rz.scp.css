@@ -31,7 +31,7 @@ div.blockItemMain[b-gf23cx72l6] {
 }
 
 div.spec_name[b-gf23cx72l6] {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: bold;
     margin-right: 15px;
 }
@@ -43,6 +43,12 @@ div.index[b-gf23cx72l6] {
     align-items: center;
     font-size: 18px;
     font-weight: bold; 
+}
+
+.addData[b-gf23cx72l6] {
+    font-size: 20px;
+    margin-top: 10px;
+    padding: 2px;
 }
 
 div.data[b-gf23cx72l6] {
@@ -67,4 +73,6 @@ div.col-lg-3[b-gf23cx72l6] {
 
 .inst_name[b-gf23cx72l6] {
     margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 18px;
 }

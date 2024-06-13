@@ -57,3 +57,4 @@ C:\All\SUSU\КУРСАЧ 23-24\5. Реализация и тестировани
 C:\All\SUSU\КУРСАЧ 23-24\5. Реализация и тестирование системы\WebApp\WebApp\obj\Debug\net8.0\scopedcss\Components\Pages\SearchSortBar.razor.rz.scp.css
 C:\All\SUSU\КУРСАЧ 23-24\5. Реализация и тестирование системы\WebApp\WebApp\obj\Debug\net8.0\scopedcss\Components\Pages\Bakalavriat.razor.rz.scp.css
 C:\All\SUSU\КУРСАЧ 23-24\5. Реализация и тестирование системы\WebApp\WebApp\obj\Debug\net8.0\scopedcss\Components\Pages\Institutes.razor.rz.scp.css
+C:\All\SUSU\КУРСАЧ 23-24\5. Реализация и тестирование системы\WebApp\WebApp\obj\Debug\net8.0\scopedcss\Components\Pages\Home.razor.rz.scp.css

@@ -1,5 +1,6 @@
 ﻿namespace WebApp
 {
+	// Класс для хранения значений критериев поиска
 	public class SearchData
 	{
 		public string Name { get; set; } = "";

@@ -1,25 +1,4 @@
 ﻿<div class="bar-content">
-	@* <div class="row bar-head">
-	<h3>Поиск и сортировка</h3>
-	</div>
-
-	<div class="row"></div>
-
-	<div class="top-row ps-3">
-	<div class="container-fluid">
-	<a class="navbar-brand" href="">WebApp</a>
-	</div>
-	</div>
-
-	<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
-	<nav class="flex-column">
-	<div class="nav-item px-3">
-	<NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-	<span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
-	</NavLink>
-	</div>
-	</nav>
-	</div> *@
 
 	<h3>Поиск и сортировка</h3>
 
@@ -79,7 +58,7 @@
 	</div>
 	<div class="searchBlock">
 		<div class="blockName">
-			<div class="name">Количество мест на платное обчение</div>
+			<div class="name">Количество мест на контракт</div>
 			<button @onclick="@SecondSortBtnClick">@btnChar[1]</button>
 		</div>
 		<div class="places">
@@ -108,43 +87,23 @@
 		<button @onclick="OnSortBtnClick">Отсортировать</button>
 	</div>
 
-	@* @if (BarType == "Магистратура")
-	{
-	<div>mag </div>
-	}
-	else
-	{
-	<div>Выбрано: </div>
-	} *@
-	@* <div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
-	<nav class="flex-column">
-	<div class="nav-item px-3">
-	<NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-	<span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
-	</NavLink>
-	</div>
-	<div class="nav-item px-3">
-
-	</div>
-	</nav>
-	</div> *@
-
 </div>
 
 
 @code {
 	[Parameter]
-	public string BarType { get; set; } = "";
+	public string BarType { get; set; } = "";	// переменная (параметр компонента) определяющая выводимые поля поиска
 
 	[Parameter]
-	public EventCallback<SearchData> OnClickCallback { get; set; }
+	public EventCallback<SearchData> OnClickCallback { get; set; }	// параметр принимающий метод обработки события нажатия на кнопку поиска
 
 	[Parameter]
-	public EventCallback<SearchData> OnSortClickCallback { get; set; }
+	public EventCallback<SearchData> OnSortClickCallback { get; set; }  // параметр принимающий метод обработки события нажатия на кнопку сортировки
 
-	Dictionary<string, bool> educForm = new Dictionary<string, bool>();
-	Dictionary<int, int> sortSet = new Dictionary<int, int>();
+	Dictionary<string, bool> educForm = new Dictionary<string, bool>();	// словарь для хранения булевых значений определяющих выбрана форма обучения (ключ словаря) для поиска или нет
+	Dictionary<int, int> sortSet = new Dictionary<int, int>();			// словарь для хранения булевых значений определяющих выбран ли критерий сортировки (ключ) и его тип (значение элемента словаря)
 
+	// метод установки начальных значений кнопок сортировки
 	protected override void OnInitialized()
 	{
 		for (int i = 0; i < 4; i++)
@@ -158,18 +117,18 @@
 
 	int currentStr = 0;
 
-	char[] chars = new char[3] { '-', '↑', '↓' };
+	char[] chars = new char[3] { '-', '↑', '↓' };	// текстовые значения кнопок сортировки
 	string[] strings = new string[3] { " - ", "A..Я", "Я..А" };
 	List<char> btnChar = new List<char>();
 	List<int> curChar = new List<int>();
 
 	string btnStr = " - ";
-	//string rad_str = "";
 	string name_str = "";
 	bool firstValue = false;
 	bool secondValue = false;
 	bool thirdValue = false;
 
+	// Метод обработки нажатия на кнопку поиска передающий значения в метод из параметра OnClickCallback
 	async Task OnBtnClick()
 	{
 		educForm.Clear();
@@ -182,7 +141,7 @@
 		await OnClickCallback.InvokeAsync(sData);
 	}
 
-
+	// Метод обработки нажатия на кнопку сортировки передающий значения в метод из параметра OnSortClickCallback
 	async Task OnSortBtnClick()
 	{
 		educForm.Clear();
@@ -200,6 +159,7 @@
 		await OnSortClickCallback.InvokeAsync(sData);
 	}
 
+	// Следующие четыре метода определяют значение кнопок сортировки (таким образом чтобы можно было установить только один тип сортировки)
 
 	public void NameSortBtnClick()
 	{

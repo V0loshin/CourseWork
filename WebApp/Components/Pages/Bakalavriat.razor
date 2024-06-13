@@ -3,36 +3,6 @@
 @rendermode InteractiveServer
 
 <div class="bakalcontent">
-	@* @if (table != null && lastViewedIndex == 0)
-	{
-	//viewedTable = new DataTable();
-	viewedTable = table.Clone();
-
-	if (table.Rows.Count == 0)
-	{
-	<p><em>Loading...</em></p>
-	}
-	if (table.Rows.Count > 20)
-	{
-	for (int i = 0; i < 20; i++)
-	{
-	lastViewedIndex = i;
-	viewedTable.ImportRow(table.Rows[i]);
-	}
-	if (lastViewedIndex < table.Rows.Count - 1) ShowNext = true;
-	else ShowNext = false;
-	}
-	else
-	{
-	for (int i = 0; i < table.Rows.Count; i++)
-	{
-	lastViewedIndex = i;
-	}
-	ShowNext = false;
-	}
-	} *@
-
-
 	<div class="container">
 		<div class="row page">
 			<div class="col-lg-3">
@@ -70,11 +40,14 @@
 									<div class="inst_name">
 										<a href="@viewedTable.Rows[i][7]">@viewedTable.Rows[i][1]</a>
 									</div>
-									<div class="educ_form">Форма: @viewedTable.Rows[i][2]</div>
-									<div class="passing_score">Проходной балл (2023г.): @viewedTable.Rows[i][3]</div>
-									<div class="budg_places">Бюджетных мест: @viewedTable.Rows[i][4]</div>
-									<div class="contract_places">Мест на платное обучение: @viewedTable.Rows[i][5]</div>
-									<div class="cost">Стоимость платного обучения: @viewedTable.Rows[i][6] р.</div>
+									<div class="addData">
+										<div class="educ_form">Форма: @viewedTable.Rows[i][2]</div>
+										<div class="passing_score">Проходной балл (2023г.): @viewedTable.Rows[i][3]</div>
+										<div class="budg_places">Бюджетных мест: @viewedTable.Rows[i][4]</div>
+										<div class="contract_places">Мест на платное обучение: @viewedTable.Rows[i][5]</div>
+										<div class="cost">Стоимость платного обучения: @viewedTable.Rows[i][6] р.</div>
+									</div>
+
 								</div>
 							</div>
 							counter += 1;
@@ -95,53 +68,19 @@
 
 	</div>
 
-
-	@* @foreach (var row in viewedTable.Rows)
-	{
-	int i = counter;
-	<div class="row blockItemMain">
-	<div class=" col-md-1">@(i + 1)</div>
-	<div class=" col-md-11">
-	<div class="spec_name">@viewedTable.Rows[i][0]</div>
-	<div class="qualif">@viewedTable.Rows[i][8]</div>
-	<div class="inst_name">
-	<a href="@viewedTable.Rows[i][7]">@viewedTable.Rows[i][1]</a>
-	</div>
-	<div class="educ_form">@viewedTable.Rows[i][2]</div>
-	<div class="passing_score">@viewedTable.Rows[i][3]</div>
-	<div class="budg_places">@viewedTable.Rows[i][4]</div>
-	<div class="contract_places">@viewedTable.Rows[i][5]</div>
-	<div class="cost">@viewedTable.Rows[i][6]</div>
-	</div>
-	</div>
-	<div class="row blockItemMain">
-	<div class=" col-md-12">
-	<div class="subj_name"></div>
-	</div>
-	</div>
-	counter += 1;
-	}
-
-	@if (counter == viewedTable.Rows.Count && ShowNext)
-	{
-	<div>
-	<button @onclick="@IsClicked">Далее</button>
-	</div>
-	} *@
-
 </div>
 
 @code {
 	DataBase? db;
-	DataTable? table;
-	DataTable? viewedTable;
-	DataTable? foundDataTable;
-	DataTable? sortedTable;
+	DataTable? table;           // основная таблица хранящая весь список направлений текущей страницы
+	DataTable? viewedTable;     // таблица которая хранит список выводимый на текущий момент
+	DataTable? foundDataTable;  // таблица значений общего списка найденных по критериям поиска
+	DataTable? sortedTable;     // таблица отсортированных по заданному критерию значений
 	MySqlDataAdapter? adapter;
 	MySqlCommand? command;
-	SearchData? sData;
-
-	int lastViewedIndex = 0;
+	SearchData? sData;          // переменная получающая и хранящая значения поиска и сортировки
+								
+	int lastViewedIndex = 0;    // индекс последнего элемента в отображаемой таблице
 	bool ShowNext = false;
 	bool btnClicked = false;
 	bool valuesFound = false;
@@ -149,6 +88,7 @@
 	int counter = 0;
 	string selectrow = "";
 
+	// При инициализации страницы получаем данные для неё из базы данных
 	protected override void OnInitialized()
 	{
 		db = new DataBase();
@@ -178,6 +118,7 @@
 		counter = 0;
 	}
 
+	// Метод для заполнения значениями переменной, которая хранит список выводимый на экран в текущий момент
 	public void FillViewTable(DataTable dTable)
 	{
 		if (dTable != null && lastViewedIndex == 0)
@@ -208,6 +149,7 @@
 		else viewedTable.Clear();
 	}
 
+	// Метод обработки события нажатия на кнопку для вывода следующих нескольких элементов списка
 	public void NextIsClicked()
 	{
 		if (foundDataTable == null && sortedTable == null)
@@ -288,6 +230,7 @@
 
 	}
 
+	// Метод обработки события нажатия на кнопку поиска
 	public void GetSearchData(SearchData data)
 	{
 		sData = new SearchData();
@@ -295,6 +238,7 @@
 		Search();
 	}
 
+	// Метод обработки события нажатия на кнопку сортировки
 	public void GetSortData(SearchData data)
 	{
 		sData = new SearchData();
@@ -304,9 +248,9 @@
 		Sort();
 	}
 
+	// Метод поиска значений
 	public void Search()
 	{
-		//bool sortNeeded = false;
 		bool found = false;
 		bool hasValues = false;
 		lastViewedIndex = 0;
@@ -354,19 +298,18 @@
 						}
 					}
 				}
-
-
 			}
 		}
 		FillViewTable(foundDataTable);
 		btnClicked = true;
 	}
 
+	// Метод сортиоровки списка
 	public void Sort()
 	{
-		//foundDataTable = null;
 		foreach (var type in sData.SortTypesSet)
 		{
+			// Определение выбранного критерия сортировки и типа сортировки (по взр / по убв)
 			if (type.Key == 0 && type.Value != 0)
 			{
 				if (type.Value == 1) NameCombSort(1);
@@ -401,6 +344,7 @@
 		sortActive = false;
 	}
 
+	// Сортировка по названию направления; type = 1 - по взр / type = 2 - по убв
 	public void NameCombSort(int type)
 	{
 		bool swapped = false;
@@ -456,6 +400,7 @@
 		swapped = false;
 	}
 
+	// Метод сортировки по проходным баллам, количеству бюджетных или количеству контрактных мест (в зависимости от значения par_ind)
 	public void CombSort(int type, int par_ind)
 	{
 		bool swapped = false;
@@ -511,6 +456,7 @@
 		swapped = false;
 	}
 
+	// Метод для заполнения переменной храанящей отсортированный список
 	public void FillSortTable(DataTable dTable)
 	{
 		sortedTable = dTable.Clone();
@@ -519,30 +465,4 @@
 			sortedTable.ImportRow(dTable.Rows[i]);
 		}
 	}
-
-	// public void IsClicked()
-	// {
-	// 	if (table.Rows.Count - lastViewedIndex + 1 > 20)
-	// 	{
-	// 		for (int i = lastViewedIndex + 1; i < lastViewedIndex + 21; i++)
-	// 		{
-	// 			viewedTable.ImportRow(table.Rows[i]);
-	// 			if (i == lastViewedIndex + 20) break;
-	// 		}
-	// 		lastViewedIndex = lastViewedIndex + 20;
-	// 		if (lastViewedIndex < table.Rows.Count - 1) ShowNext = true;
-	// 		else ShowNext = false;
-	// 	}
-	// 	else
-	// 	{
-	// 		for (int i = lastViewedIndex + 1; i < table.Rows.Count; i++)
-	// 		{
-	// 			viewedTable.ImportRow(table.Rows[i]);
-	// 			if (i == table.Rows.Count - 1) break;
-	// 		}
-	// 		lastViewedIndex = table.Rows.Count - 1;
-	// 		ShowNext = false;
-	// 	}
-	// 	counter = 0;
-		// }
 }

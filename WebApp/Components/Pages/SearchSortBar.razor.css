@@ -10,7 +10,12 @@
     margin-bottom: 30px;
 }
 
+.search-spec-name input {
+    width: auto;
+}
+
 input {
+    width: 65px;
     padding-left: 5px;
     padding-right: 5px;
 }
@@ -29,9 +34,6 @@ p {
 p div {
     margin-left: 15px;
 }
-/*.search-spec-name input {
-    margin-top: 0px;
-}*/
 
 .search-spec-name .blockName {
     display: grid;
@@ -45,6 +47,7 @@ p div {
     grid-template-columns: 80% 20%;
     margin-top: 15px;
     margin-bottom: 20px;
+    font-size: 18px;
     font-weight: bold;
     color: #004886;
 }
@@ -61,6 +64,7 @@ p div {
     }
 
 .places {
+    margin-top: 45px;
     display: grid;
     grid-template-columns: 20% 35% 45%;
 }

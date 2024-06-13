@@ -2,9 +2,10 @@
 
 namespace WebApp
 {
+    // Класс для подключения к базе данных
     public class DataBase
     {
-        MySqlConnection _connection = new MySqlConnection("server=localhost;port=3306;username=root;password=Bk.[fDjkj[f03;database=institutes");
+        MySqlConnection _connection = new MySqlConnection("server=localhost;port=3306;username=;password=;database=institutes");
 
         public void openConnection()
         {

@@ -10,7 +10,15 @@ h3[b-uhti4tl855] {
     margin-bottom: 30px;
 }
 
+.bar-content[b-uhti4tl855] {
+}
+
+.search-spec-name input[b-uhti4tl855] {
+    width: auto;
+}
+
 input[b-uhti4tl855] {
+    width: 65px;
     padding-left: 5px;
     padding-right: 5px;
 }
@@ -45,6 +53,7 @@ p div[b-uhti4tl855] {
     grid-template-columns: 80% 20%;
     margin-top: 15px;
     margin-bottom: 20px;
+    font-size: 18px;
     font-weight: bold;
     color: #004886;
 }
@@ -61,6 +70,7 @@ p div[b-uhti4tl855] {
     }
 
 .places[b-uhti4tl855] {
+    margin-top: 45px;
     display: grid;
     grid-template-columns: 20% 35% 45%;
 }

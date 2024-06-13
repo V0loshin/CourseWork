@@ -17,6 +17,7 @@ a, .btn-link {
 .btn-primary {
     height:auto;
     width: auto;
+    padding-right: 10px;
     font-size: 20px;
     color: #fff;
     background-color: #1b6ec2;
